@@ -1,0 +1,16 @@
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\IIS.Web.Services.dll.config
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\IIS.Web.Services.dll
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\IIS.Web.Services.pdb
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\EntityFramework.dll
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\IIS.Web.Models.dll
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\IIS.Web.Models.pdb
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\EntityFramework.xml
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\obj\Debug\IIS.Web.Services.csprojResolveAssemblyReference.cache
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\obj\Debug\IIS.Web.Services.csproj.CoreCompileInputs.cache
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\obj\Debug\IIS.Web.Services.dll
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\obj\Debug\IIS.Web.Services.pdb
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\obj\Debug\IIS.Web.Services.Migrations.InitialMigration.resources
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\obj\Debug\IIS.Web.Services.csproj.GenerateResource.Cache
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Services\obj\Debug\IIS.Web.Services.Migrations.RemovedPreviousVersionAndAddedDataModel.resources
