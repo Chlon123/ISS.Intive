@@ -12,7 +12,7 @@ namespace IIS.Web.Services.DbContexts
     public class IISDbContext : DbContext
     {
         public IISDbContext()
-            : base(DbContextConnectionStrings.DefaultConnectionString)
+            : base(DbContextConnectionStrings.IISConnection.ToString())
         {
 
         }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace IIS.Web.Services.DbContexts.Helpers
 {
-    public static class DbContextConnectionStrings
+    enum DbContextConnectionStrings
     {
-        public static readonly string DefaultConnectionString = "IISConnection";
-
+        IISConnection
     }
 }

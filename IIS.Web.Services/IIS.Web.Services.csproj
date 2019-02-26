@@ -36,6 +36,10 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Json.Net, Version=1.0.16.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Json.Net.1.0.16\lib\netstandard2.0\Json.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -58,11 +62,33 @@
     <Compile Include="Migrations\201902231316457_RemovedPreviousVersionAndAddedDataModel.Designer.cs">
       <DependentUpon>201902231316457_RemovedPreviousVersionAndAddedDataModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201902231609368_PopulateCalculationData.cs" />
+    <Compile Include="Migrations\201902231609368_PopulateCalculationData.Designer.cs">
+      <DependentUpon>201902231609368_PopulateCalculationData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902232111173_AddModelForControllerActions.cs" />
+    <Compile Include="Migrations\201902232111173_AddModelForControllerActions.Designer.cs">
+      <DependentUpon>201902232111173_AddModelForControllerActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902232122395_CorrectData.cs" />
+    <Compile Include="Migrations\201902232122395_CorrectData.Designer.cs">
+      <DependentUpon>201902232122395_CorrectData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902242244567_AddPropertyToSpaceStationData.cs" />
+    <Compile Include="Migrations\201902242244567_AddPropertyToSpaceStationData.Designer.cs">
+      <DependentUpon>201902242244567_AddPropertyToSpaceStationData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201902252142230_RemoveSpaceStationDataModel.cs" />
+    <Compile Include="Migrations\201902252142230_RemoveSpaceStationDataModel.Designer.cs">
+      <DependentUpon>201902252142230_RemoveSpaceStationDataModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CalculationDataRepository.cs" />
     <Compile Include="Repositories\Helpers\CalculationFormulas.cs" />
     <Compile Include="Repositories\Interfaces\ICalculationDataRepository.cs" />
+    <Compile Include="Services.DTOs\SpaceStationData.cs" />
+    <Compile Include="Services.DTOs\SpaceStationPosition.cs" />
     <Compile Include="UnitOfWork\Interfaces\IUnitOfWork.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
   </ItemGroup>
@@ -78,6 +104,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201902231316457_RemovedPreviousVersionAndAddedDataModel.resx">
       <DependentUpon>201902231316457_RemovedPreviousVersionAndAddedDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902231609368_PopulateCalculationData.resx">
+      <DependentUpon>201902231609368_PopulateCalculationData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902232111173_AddModelForControllerActions.resx">
+      <DependentUpon>201902232111173_AddModelForControllerActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902232122395_CorrectData.resx">
+      <DependentUpon>201902232122395_CorrectData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902242244567_AddPropertyToSpaceStationData.resx">
+      <DependentUpon>201902242244567_AddPropertyToSpaceStationData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201902252142230_RemoveSpaceStationDataModel.resx">
+      <DependentUpon>201902252142230_RemoveSpaceStationDataModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

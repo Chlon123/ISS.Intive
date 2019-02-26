@@ -1,4 +1,5 @@
 ﻿using IIS.Web.Models;
+using IIS.Web.Services.Services.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace IIS.Web.Services.Repositories.Interfaces
 {
     public interface ICalculationDataRepository
     {
-        double CalculateDistance(IDictionary<string, double> datas);
-
+        IDictionary<string, double> GetSpeedandTotalDistance(SpaceStationData spaceStation);
     }
 }
