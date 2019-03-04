@@ -34,14 +34,14 @@ namespace IIS.Web.API.Controllers
         {
             try
             {
-                SpaceStationData SpaceStationDatas = await SpaceStationHandler.GetNecessaryData("http://api.open-notify.org/iss-now.json");
+                SpaceStationData SpaceStationDatas = await new SpaceStationHandler().GetNecessaryData("http://api.open-notify.org/iss-now.json");
 
                 if (SpaceStationDatas == null)
                 {
-                    return BadRequest();
+                    return BadRequest("We are sorry, the ISS service from which you are trying get response is not avaiable at the moment!");
                 }
 
-                IDictionary<string, double> finalData = _unitOfWork.CalculationDataRepository.GetSpeedandTotalDistance(SpaceStationDatas);
+                CalculatedSpaceStation finalData = _unitOfWork.CalculationDataRepository.GetSpeedAndTotalDistance(SpaceStationDatas);
 
                 return Ok(finalData);
             }

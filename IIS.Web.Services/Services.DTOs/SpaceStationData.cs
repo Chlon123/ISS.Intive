@@ -14,34 +14,21 @@ namespace IIS.Web.Services.Services.DTOs
         public SpaceStationPosition spaceStationPosition { get; set; }
 
         [JsonProperty("timestamp")]
-        public double TimestampJsonRequest { get; set; }
+        public double TimestampFirstRequest { get; set; }
 
         [JsonProperty("message")]
-        public string MessageJsonRequest { get; set; }
+        public string MessageFirstRequest { get; set; }
 
-        public double LatitudeJsonRequest { get; set; }
+        public double LatitudeFirstRequest { get; set; }
 
-        public double LongitudeJsonRequest { get; set; }
+        public double LongitudeFirstRequest { get; set; }
 
-        public double LatitudeSecondRequired { get; set; }
+        public double LatitudeSecondRequest { get; set; }
 
-        public double LongitudeSecondRequired { get; set; }
+        public double LongitudeSecondRequest { get; set; }
 
-        public double TimestampSecondRequired { get; set; }
+        public double TimestampSecondRequest { get; set; }
 
-        public string MessageSecondRequired { get; set; }
-
-        public double CoordinateX1 { get; set; }
-
-        public double CoordinateY1 { get; set; }
-
-        public double CoordinateZ1 { get; set; }
-
-        public double CoordinateX2 { get; set; }
-
-        public double CoordinateY2 { get; set; }
-
-        public double CoordinateZ2 { get; set; }
-
+        public string MessageSecondRequest { get; set; }
     }
 }

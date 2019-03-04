@@ -10,6 +10,8 @@ namespace IIS.Web.Services.Repositories.Interfaces
 {
     public interface ICalculationDataRepository
     {
-        IDictionary<string, double> GetSpeedandTotalDistance(SpaceStationData spaceStation);
+        CalculatedSpaceStation GetSpeedAndTotalDistance(SpaceStationData spaceStation);
+
+        SpaceStationData GetCombinedSpaceStationData(SpaceStationData firstRequestObject, SpaceStationData secondRequestObject);
     }
 }

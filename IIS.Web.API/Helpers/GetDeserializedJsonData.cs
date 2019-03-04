@@ -9,15 +9,20 @@ using System.Web;
 
 namespace IIS.Web.API.Helpers
 {
-    public static class GetDeserializedJsonData<T> where T : class
+    public class GetDeserializedJsonData<T> where T : class
     {
-        private static HttpClient client;
+        private HttpClient _client;
+        private string urlAdress;
 
-        public static async Task<T> DeserializedJsonData(string url)
+        public GetDeserializedJsonData(HttpClient client, string url)
         {
-            client = new HttpClient();
+            _client = client;
+            urlAdress = url;
+        }
 
-            HttpResponseMessage response = await client.GetAsync(url);
+        public async Task<T> DeserializedJsonData()
+        {
+            HttpResponseMessage response = await _client.GetAsync(urlAdress);
             response.EnsureSuccessStatusCode();
             string jsonResponseAsString = await response.Content.ReadAsStringAsync();
 

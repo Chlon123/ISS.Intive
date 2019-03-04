@@ -1,41 +1,50 @@
-﻿using IIS.Web.Services.Services.DTOs;
+﻿using IIS.Web.Services.DbContexts;
+using IIS.Web.Services.Services.DTOs;
+using IIS.Web.Services.UnitOfWork;
+using IIS.Web.Services.UnitOfWork.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
 
 namespace IIS.Web.API.Helpers
 {
-    public static class SpaceStationHandler
+    public class SpaceStationHandler
     {
+        private static HttpClient _client;
+        private readonly IISDbContext _dbContext;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public async static Task<SpaceStationData> GetNecessaryData(string url)
+        public SpaceStationHandler()
         {
-            SpaceStationData spaceStationAsDeserializedJsonOne =
-                await GetDeserializedJsonData<SpaceStationData>.DeserializedJsonData(url);
+            _client = new HttpClient();
+            _dbContext = new IISDbContext();
+            _unitOfWork = new UnitOfWork(_dbContext);
+        }
 
-            SpaceStationData spaceStationAsDeserializedJsonTwo =
-                 await GetDeserializedJsonData<SpaceStationData>.DeserializedJsonData(url);
+        public async Task<SpaceStationData> GetNecessaryData(string url)
+        {
 
+            SpaceStationData firstReqDeserializedObject = await DeserializeSpaceStationObject(_client, url);
 
-            if (!spaceStationAsDeserializedJsonOne.MessageJsonRequest.Equals(ConnectionStatus.success.ToString())
-                || !spaceStationAsDeserializedJsonTwo.MessageJsonRequest.Equals(ConnectionStatus.success.ToString()))
-            {
-                return null;
-            }
+            await Task.Delay(1000);
 
-            SpaceStationData combinedSpaceStationDatas = new SpaceStationData()
-            {
-                LatitudeJsonRequest = spaceStationAsDeserializedJsonOne.spaceStationPosition.LatitudeJson,
-                LatitudeSecondRequired = spaceStationAsDeserializedJsonTwo.spaceStationPosition.LatitudeJson,
-                LongitudeJsonRequest = spaceStationAsDeserializedJsonOne.spaceStationPosition.LongitudeJson,
-                LongitudeSecondRequired = spaceStationAsDeserializedJsonTwo.spaceStationPosition.LongitudeJson,
-                TimestampJsonRequest = spaceStationAsDeserializedJsonOne.TimestampJsonRequest,
-                TimestampSecondRequired = spaceStationAsDeserializedJsonTwo.TimestampJsonRequest
-            };
+            SpaceStationData secondReqDeserializedObject = await DeserializeSpaceStationObject(_client, url);
 
-            return combinedSpaceStationDatas;
+            SpaceStationData combinedSpaceStation = _unitOfWork
+                                                    .CalculationDataRepository
+                                                    .GetCombinedSpaceStationData(firstReqDeserializedObject, secondReqDeserializedObject);
+                
+            return combinedSpaceStation;
+        }
+
+        private async Task<SpaceStationData> DeserializeSpaceStationObject(HttpClient client, string url)
+        {
+            SpaceStationData deserializedObject = await new GetDeserializedJsonData<SpaceStationData>(_client, url).DeserializedJsonData();
+
+            return deserializedObject;
         }
     }
 }
