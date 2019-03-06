@@ -1,6 +1,6 @@
 C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\bin\Debug\IIS.Web.Models.dll
 C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\bin\Debug\IIS.Web.Models.pdb
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Debug\IIS.Web.Models.csprojResolveAssemblyReference.cache
 C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Debug\IIS.Web.Models.csproj.CoreCompileInputs.cache
 C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Debug\IIS.Web.Models.dll
 C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Debug\IIS.Web.Models.pdb
-C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Debug\IIS.Web.Models.csprojResolveAssemblyReference.cache

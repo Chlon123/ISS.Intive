@@ -15,6 +15,8 @@ namespace IIS.Web.API.App_Start
         {
             var config = new HttpConfiguration();
 
+            config.EnableCors();
+
             //Web Api Routes
             config.MapHttpAttributeRoutes();
 

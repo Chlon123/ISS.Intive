@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using IIS.Web.API.Helpers;
+using System.Web.Http.Cors;
 
 namespace IIS.Web.API.Controllers
 {
@@ -29,6 +30,7 @@ namespace IIS.Web.API.Controllers
 
 
         //GET: Start
+        [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
         [System.Web.Http.HttpGet]
         public async Task<IHttpActionResult> SpaceTravel()
         {
@@ -43,7 +45,9 @@ namespace IIS.Web.API.Controllers
 
                 CalculatedSpaceStation finalData = _unitOfWork.CalculationDataRepository.GetSpeedAndTotalDistance(SpaceStationDatas);
 
-                return Ok(finalData);
+                
+
+                return Json(finalData);
             }
             catch (Exception ex)
             {
