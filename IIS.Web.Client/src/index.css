@@ -1,0 +1,25 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width:300px;
+  min-height: 480px;
+  font-size: 16px;
+  height: 100vh;
+  font-family: 'Passion One', cursive;
+  background-position: 0% 0%;
+  background-size: 100vw 100%;   
+  background-repeat: no-repeat;
+  background-image: url(./components/App/styles/images/space.png);
+  box-shadow: inset 25px 25px 45px rgba(0,0,0,0.5), inset -25px -25px 45px rgba(0,0,0,0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+@font-face {
+  font-family: 'StarWarsFonts';
+  src: url('./styles/fonts/Starjhol.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+.show{
+  display: block;
+}

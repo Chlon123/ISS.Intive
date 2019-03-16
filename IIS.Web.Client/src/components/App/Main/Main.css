@@ -1,0 +1,80 @@
+.main-parent{
+    display: none;
+    height: 90%;
+    width: 60%;
+
+}
+
+.mainContentContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 9%;
+}
+
+.animation-wrapper{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    -webkit-transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.earthImage{
+    width:100%;
+    height:100%;
+    -webkit-transform: rotate(30deg);
+	-ms-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.spaceStationImage{
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    left: 50%;
+    bottom: 30%;
+}
+
+.iss-table{
+    letter-spacing: 4px;
+    font-family: 'starFont';
+    color: black;
+    text-shadow: -0.5px 0 gold, 0 0.5px gold, 0.5px 0 gold, 0 -0.5px gold;
+}
+
+
+@font-face {
+    font-family: 'starFont';
+    src: url('../../../styles/fonts/Starjedi.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+
+@keyframes fadeInFromNone {
+    0% {
+        opacity: 0.2;
+    }
+
+    1% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutFromNone {
+    0% {
+        opacity: 1;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}

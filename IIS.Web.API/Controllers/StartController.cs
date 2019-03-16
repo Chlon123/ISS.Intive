@@ -50,7 +50,7 @@ namespace IIS.Web.API.Controllers
             }
             catch (Exception ex)
             {
-                return InternalServerError(ex)
+                return InternalServerError(ex);
             }
 
         }
