@@ -30,7 +30,7 @@ namespace IIS.Web.API.Controllers
 
 
         //GET: Start
-        [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         [System.Web.Http.HttpGet]
         public async Task<IHttpActionResult> SpaceTravel()
         {
@@ -45,13 +45,12 @@ namespace IIS.Web.API.Controllers
 
                 CalculatedSpaceStation finalData = _unitOfWork.CalculationDataRepository.GetSpeedAndTotalDistance(SpaceStationDatas);
 
-                
 
-                return Json(finalData);
+                return Ok(finalData);
             }
             catch (Exception ex)
             {
-                return InternalServerError(ex);
+                return InternalServerError(ex)
             }
 
         }

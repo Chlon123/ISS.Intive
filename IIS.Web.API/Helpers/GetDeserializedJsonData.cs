@@ -24,9 +24,9 @@ namespace IIS.Web.API.Helpers
         {
             HttpResponseMessage response = await _client.GetAsync(urlAdress);
             response.EnsureSuccessStatusCode();
-            string jsonResponseAsString = await response.Content.ReadAsStringAsync();
+            string jsonString = await response.Content.ReadAsStringAsync();
 
-            T deserializedJsonObject = JsonConvert.DeserializeObject<T>(jsonResponseAsString);
+            T deserializedJsonObject = JsonConvert.DeserializeObject<T>(jsonString);
 
             return deserializedJsonObject;
 

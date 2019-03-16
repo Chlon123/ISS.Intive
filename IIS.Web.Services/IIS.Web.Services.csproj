@@ -128,14 +128,5 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="Images\Planets\Planet1.png" />
-    <Content Include="Images\Planets\Planet2.png" />
-    <Content Include="Images\Planets\Planet3.png" />
-    <Content Include="Images\space.jpeg" />
-    <Content Include="Images\SpaceStations\SpaceStation2.png" />
-    <Content Include="Images\SpaceStations\SpaceStation3.png" />
-    <Content Include="Images\SpaceStations\SpaceStation4.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

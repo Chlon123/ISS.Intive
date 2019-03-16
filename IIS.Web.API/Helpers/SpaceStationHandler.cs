@@ -29,7 +29,7 @@ namespace IIS.Web.API.Helpers
 
             SpaceStationData firstReqDeserializedObject = await DeserializeSpaceStationObject(_client, url);
 
-            await Task.Delay(1000);
+            await Task.Delay(1001);
 
             SpaceStationData secondReqDeserializedObject = await DeserializeSpaceStationObject(_client, url);
 
