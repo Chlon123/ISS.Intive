@@ -1,0 +1,5 @@
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\bin\Release\IIS.Web.Models.dll
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\bin\Release\IIS.Web.Models.pdb
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Release\IIS.Web.Models.csproj.CoreCompileInputs.cache
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Release\IIS.Web.Models.dll
+C:\Users\kacch\source\C#.Web.Projects\IISProject\IIS.Web.API\IIS.Web.Models\obj\Release\IIS.Web.Models.pdb

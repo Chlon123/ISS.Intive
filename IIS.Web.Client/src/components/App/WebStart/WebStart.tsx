@@ -30,9 +30,8 @@ class WebStart extends React.Component <any, any> {
           main.classList.add('show');
           footer.classList.add('show');
           stationAnimation();
-          this.props.getData();
         }, 2900);
-
+        this.props.getData();
     }
 
 

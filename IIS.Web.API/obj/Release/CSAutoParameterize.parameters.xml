@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IISConnection-Web.config Connection String" description="IISConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:iss-db.database.windows.net,1433;Initial Catalog=ISS_Database;Persist Security Info=False;User ID={your_username};Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\kacch\\source\\C\#\.Web\.Projects\\IISProject\\IIS\.Web\.API\\IIS\.Web\.API\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='IISConnection']/@connectionString" />
+  </parameter>
+</parameters>

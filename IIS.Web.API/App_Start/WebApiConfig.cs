@@ -33,6 +33,9 @@ namespace IIS.Web.API.App_Start
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver
                 = new CamelCasePropertyNamesContractResolver();
 
+            // Code that allows you to see what kind of problem is with your app on Azure.
+            //config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+
             return config;
         }
     }

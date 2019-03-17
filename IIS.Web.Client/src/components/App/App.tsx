@@ -14,7 +14,7 @@ class App extends React.Component <any, any> {
     }
 
     getISSData(){
-      axios.get('http://localhost:59622/start/spacetravel')
+      axios.get('http://isswebrestapi.azurewebsites.net/start/spacetravel')
       .then(res => {this.setState({data: res.data}, () => console.log(this.state.data))
         })};
 

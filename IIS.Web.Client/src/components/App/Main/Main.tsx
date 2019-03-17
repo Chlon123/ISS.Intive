@@ -31,11 +31,6 @@ class Main extends React.Component <any, any> {
     return dist;
   }
 
-  getTimeOfMeasurement(){
-    var currentTime = new Date();
-    return currentTime.getHours() + ":" +  currentTime.getMinutes() + ":" + currentTime.getSeconds();
-  }
-
     public render() {
       return (
         <div className='main-parent' id="#main">
@@ -45,19 +40,13 @@ class Main extends React.Component <any, any> {
         <img src={spaceStation} className='spaceStationImage' id='#spaceStationImage'></img>
         </div>
         <table className='iss-table'>
-        <tr>
-          <th colSpan={3} >Measured from</th>
-        </tr>
-        <tr>
-        <th colSpan ={3}>{this.getTimeOfMeasurement()}</th>
-        </tr>
             <tr>
-                <th>distance: </th>
+                <th>iss distance: </th>
                 <th>{this.getDistance()}</th>
                 <th>km</th>
             </tr>
             <tr>
-                <th>velocity: </th>
+                <th>iss velocity: </th>
                 <th>{this.getVelocity()}</th>
                 <th>km/h</th>
             </tr>
