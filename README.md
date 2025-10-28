@@ -1,0 +1,1 @@
+A small project created for a recruitment task for the Intive Patronage 2019 program. It retrieves data from an external service about the location of the International Space Station and then returns its speed and the distance it has traveled.
